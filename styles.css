@@ -1,0 +1,198 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('img/logo.jpg'); /* Cambia esto a la ruta de tu imagen de fondo */
+    background-size: 50px 50px; /* Establece el tamaño de la imagen de fondo */
+    background-repeat: repeat; /* Hace que la imagen se repita como mosaico */
+}
+
+
+header {
+    display: flex; /* Usar flexbox para alinear los elementos */
+    flex-direction: column; /* Colocar los elementos en una columna */
+    align-items: flex-start; /* Alinear todos los elementos al inicio */
+    background-color: fuchsia; /* Asegúrate de que el color de fondo sea el deseado */
+    padding: 10px 20px; /* Añadir un poco de espacio alrededor */
+}
+
+.logo {
+    display: flex; /* Usar flexbox para alinear el logo y el título */
+    align-items: center; /* Alinear verticalmente */
+    justify-content: flex-start; /* Alinear a la izquierda */
+    width: auto; /* Ajusta el ancho automáticamente */
+}
+
+.logo img {
+    height: 100px; /* Ajustar la altura del logo a 90px */
+    margin-right: 40px; /* Espacio entre el logo y el título */
+}
+
+.logo h1 {
+    margin: 0; /* Eliminar márgenes para que el título esté más cerca del logo */
+    padding-left: 10px; /* Espaciado a la izquierda si es necesario */
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente del título aquí */
+}
+
+
+nav {
+    margin-top: 5px; /* Disminuir el margen superior para acercar el nav al logo/título */
+}
+
+nav ul {
+    display: flex; /* Usar flexbox para alinear los elementos del nav en línea */
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+}
+
+nav ul li {
+    margin: 0 10px; /* Espacio entre los elementos del menú */
+}
+
+
+nav ul li a {
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+/* Otros estilos permanecen iguales */
+
+
+nav ul li a:hover {
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.promo-item {
+    display: flex;
+    align-items: center; /* Centra verticalmente la imagen y el texto */
+    justify-content: flex-start; /* Alinea el contenido a la izquierda */
+    width: calc(50% - 20px); /* Permite que se muestren dos promociones por fila */
+    margin: 10px; /* Margen alrededor de cada promoción */
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    background-color: white; /* Fondo blanco para el recuadro */
+}
+
+
+.promo-item img {
+    width: 150px; /* Ancho fijo para las imágenes */
+    height: 150px; /* Alto fijo para las imágenes para mantener la estética */
+    object-fit: cover; /* Mantiene la proporción de la imagen, cortando el exceso si es necesario */
+    margin-right: 20px; /* Espacio entre la imagen y el texto */
+}
+
+.promo-info {
+    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
+    max-width: 100%; /* Asegura que la descripción ocupe todo el ancho disponible */
+}
+
+.old-price {
+    text-decoration: none; /* Eliminar la línea cruzada */
+    color: #999; /* Puedes ajustar el color según tu diseño */
+}
+
+.new-price {
+    display: block; /* Asegura que se muestre en una nueva línea */
+    font-weight: bold; /* Hacer que el nuevo precio resalte */
+    color: fuchsia; /* Ajusta el color para que sea más visible */
+}
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    nav ul {
+        flex-wrap: wrap; /* Permitir que los botones se muevan a otra línea */
+        justify-content: space-around; /* Espaciar mejor los botones en la fila */
+    }
+
+    nav ul li {
+        margin-bottom: 10px; /* Añadir más margen entre los botones en pantallas pequeñas */
+        margin-right: 10px; /* Espacio entre botones horizontales */
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Mantener el tamaño de la fuente adecuado */
+        padding: 10px 15px; /* Ajustar el padding para un mejor tamaño de los botones */
+    }
+    /* Estilo para los títulos h1 con fondo negro */
+    .promos h1 {
+        color: white; /* Color del texto */
+        background-color: black; /* Fondo negro */
+        padding: 10px; /* Espaciado interno alrededor del texto */
+        border-radius: 5px; /* Bordes redondeados (opcional) */
+        text-align: center; /* Centra el texto dentro del h1 */
+        display: block; /* Hace que el h1 se comporte como un bloque */
+        margin: 0 auto; /* Centra el h1 dentro de su contenedor */
+        width: fit-content; /* Ajusta el ancho del recuadro al contenido */
+        font-size: 2rem; /* Ajusta el tamaño de la fuente */
+        font-family: 'Salsa Extra', sans-serif; /* Asegúrate de que se use la fuente correcta */
+    }
+    
+    
+    
+    .promo-item {
+        flex-direction: row; /* Asegura que la imagen y el texto se alineen en una fila */
+        width: calc(100% - 20px); /* Cambia a 100% en pantallas pequeñas */
+    }
+
+    .promo-item img {
+        width: 150px; /* Ancho fijo para mantener la consistencia */
+        height: 150px; /* Alto fijo para mantener la consistencia */
+        margin-right: 20px; /* Espacio entre la imagen y el texto */
+    }
+
+    .promo-info {
+        text-align: left; /* Alinear el texto a la izquierda */
+    }
+    .whatsapp-icon {
+        position: fixed; /* Fijo en la pantalla */
+        bottom: 20px; /* Distancia desde la parte inferior */
+        right: 20px; /* Posición en la derecha */
+        z-index: 1000; /* Asegura que esté encima de otros elementos */
+    }
+    
+    .whatsapp-icon img {
+        width: 50px; /* Tamaño por defecto del icono */
+        height: 50px; /* Tamaño por defecto del icono */
+    }
+    
+    /* Media Query para pantallas de celulares */
+    @media (max-width: 768px) {
+        .whatsapp-icon img {
+            width: 60px; /* Tamaño del icono en móvil */
+            height: 60px; /* Tamaño del icono en móvil */
+        }
+    }
+    
+    /* Media Query para pantallas grandes */
+    @media (min-width: 769px) {
+        .whatsapp-icon img {
+            width: 40px; /* Tamaño del icono en escritorio */
+            height: 40px; /* Tamaño del icono en escritorio */
+        }
+    }
+    h1 {
+        color: white; /* Cambia el color a blanco */
+    }
+    
+    
+}
