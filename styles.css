@@ -1,198 +1,280 @@
-body {
-    font-family: Arial, sans-serif;
+/* Variables */
+:root {
+    --primary-color: fuchsia;
+}
+
+/* Reset de márgenes y paddings */
+* {
     margin: 0;
     padding: 0;
-    background-image: url('img/logo.jpg'); /* Cambia esto a la ruta de tu imagen de fondo */
-    background-size: 50px 50px; /* Establece el tamaño de la imagen de fondo */
-    background-repeat: repeat; /* Hace que la imagen se repita como mosaico */
+    box-sizing: border-box;
 }
 
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
 
+/* Estilos del header */
 header {
-    display: flex; /* Usar flexbox para alinear los elementos */
-    flex-direction: column; /* Colocar los elementos en una columna */
-    align-items: flex-start; /* Alinear todos los elementos al inicio */
-    background-color: fuchsia; /* Asegúrate de que el color de fondo sea el deseado */
-    padding: 10px 20px; /* Añadir un poco de espacio alrededor */
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 1rem;
 }
 
-.logo {
-    display: flex; /* Usar flexbox para alinear el logo y el título */
-    align-items: center; /* Alinear verticalmente */
-    justify-content: flex-start; /* Alinear a la izquierda */
-    width: auto; /* Ajusta el ancho automáticamente */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.logo img {
-    height: 100px; /* Ajustar la altura del logo a 90px */
-    margin-right: 40px; /* Espacio entre el logo y el título */
+header .logo {
+    width: 60px; /* Puedes ajustar el tamaño de la imagen según lo que necesites */
+    height: auto;
+    margin-left: -15px;
+    margin-right: -15px; /* Espacio entre la imagen y el título */
 }
 
-.logo h1 {
-    margin: 0; /* Eliminar márgenes para que el título esté más cerca del logo */
-    padding-left: 10px; /* Espaciado a la izquierda si es necesario */
-    font-size: 1.5rem; /* Ajusta el tamaño de fuente del título aquí */
+header h1 {
+    font-size: 1.8rem;
 }
 
-
-nav {
-    margin-top: 5px; /* Disminuir el margen superior para acercar el nav al logo/título */
-}
-
+/* Estilos de la navegación */
 nav ul {
-    display: flex; /* Usar flexbox para alinear los elementos del nav en línea */
-    list-style: none; /* Sin viñetas */
-    padding: 0; /* Sin padding */
-    margin: 0; /* Sin margen */
+    list-style-type: none;
+    display: flex;
 }
 
 nav ul li {
-    margin: 0 10px; /* Espacio entre los elementos del menú */
+    margin: 0 1rem;
 }
-
 
 nav ul li a {
+    color: #fff;
     text-decoration: none;
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin: 5px;
-    display: inline-block;
+    font-size: 1rem;
 }
 
 nav ul li a:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+    text-decoration: underline;
 }
 
-/* Otros estilos permanecen iguales */
-
-
-nav ul li a:hover {
-    background-color: white;
-    color: black;
-    border: 1px solid black;
+/* Estilos del hero */
+#hero {
+    text-align: center;
+    background-color: var(--primary-color);
+    padding: 2rem;
+    margin-bottom: 2rem;
 }
 
-.main-content {
-    padding: 20px;
+#hero h2 {
+    font-size: 2rem;
+    color: #333;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+/* Estilos de las promociones */
+.promo-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
 }
 
 .promo-item {
-    display: flex;
-    align-items: center; /* Centra verticalmente la imagen y el texto */
-    justify-content: flex-start; /* Alinea el contenido a la izquierda */
-    width: calc(50% - 20px); /* Permite que se muestren dos promociones por fila */
-    margin: 10px; /* Margen alrededor de cada promoción */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.promo-item h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.promo-item p {
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.promo-item button {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.promo-item button:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos de la imagen del producto */
+.product-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Esto asegura que la imagen se recorte si no mantiene el aspecto deseado */
+    margin-bottom: 10px;
+}
+
+/* Estilos del carrito */
+#carrito {
+    background-color: #fff;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#cart-items {
+    margin-bottom: 1.5rem;
+}
+
+#cart-total {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Estilos de los botones "+" y "-" */
+button.quantity-btn {
+    background-color: var(--primary-color);
     border: 1px solid #ccc;
-    padding: 10px;
-    box-sizing: border-box; /* Incluye padding y border en el ancho total */
-    background-color: white; /* Fondo blanco para el recuadro */
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-
-.promo-item img {
-    width: 150px; /* Ancho fijo para las imágenes */
-    height: 150px; /* Alto fijo para las imágenes para mantener la estética */
-    object-fit: cover; /* Mantiene la proporción de la imagen, cortando el exceso si es necesario */
-    margin-right: 20px; /* Espacio entre la imagen y el texto */
+button.quantity-btn:hover {
+    background-color: var(--primary-color);
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.promo-info {
-    flex-grow: 1; /* Permite que la descripción ocupe el espacio restante */
-    max-width: 100%; /* Asegura que la descripción ocupe todo el ancho disponible */
+button.quantity-btn:focus {
+    outline: none;
 }
 
-.old-price {
-    text-decoration: none; /* Eliminar la línea cruzada */
-    color: #999; /* Puedes ajustar el color según tu diseño */
+/* Estilo para el botón "Eliminar" */
+button.delete-btn {
+    background-color: #ff4d4d;
+    border: 1px solid #e60000;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.new-price {
-    display: block; /* Asegura que se muestre en una nueva línea */
-    font-weight: bold; /* Hacer que el nuevo precio resalte */
-    color: fuchsia; /* Ajusta el color para que sea más visible */
+button.delete-btn:hover {
+    background-color: #e60000;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+button.delete-btn:focus {
+    outline: none;
+}
 
-/* Media Query para pantallas pequeñas */
-@media (max-width: 768px) {
-    nav ul {
-        flex-wrap: wrap; /* Permitir que los botones se muevan a otra línea */
-        justify-content: space-around; /* Espaciar mejor los botones en la fila */
+/* Estilo para el botón de checkout */
+#checkout {
+    background-color: var(--primary-color);
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+#checkout:hover {
+    background-color: var(--primary-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 768px) {
+    /* Ajustes en las promociones para mostrar 4 productos en una fila */
+    .promo-list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 columnas en pantallas pequeñas */
+        gap: 1.5rem;
     }
 
-    nav ul li {
-        margin-bottom: 10px; /* Añadir más margen entre los botones en pantallas pequeñas */
-        margin-right: 10px; /* Espacio entre botones horizontales */
-    }
-
-    nav ul li a {
-        font-size: 14px; /* Mantener el tamaño de la fuente adecuado */
-        padding: 10px 15px; /* Ajustar el padding para un mejor tamaño de los botones */
-    }
-    /* Estilo para los títulos h1 con fondo negro */
-    .promos h1 {
-        color: white; /* Color del texto */
-        background-color: black; /* Fondo negro */
-        padding: 10px; /* Espaciado interno alrededor del texto */
-        border-radius: 5px; /* Bordes redondeados (opcional) */
-        text-align: center; /* Centra el texto dentro del h1 */
-        display: block; /* Hace que el h1 se comporte como un bloque */
-        margin: 0 auto; /* Centra el h1 dentro de su contenedor */
-        width: fit-content; /* Ajusta el ancho del recuadro al contenido */
-        font-size: 2rem; /* Ajusta el tamaño de la fuente */
-        font-family: 'Salsa Extra', sans-serif; /* Asegúrate de que se use la fuente correcta */
-    }
-    
-    
-    
+    /* Ajustes en los productos */
     .promo-item {
-        flex-direction: row; /* Asegura que la imagen y el texto se alineen en una fila */
-        width: calc(100% - 20px); /* Cambia a 100% en pantallas pequeñas */
+        background-color: #fff;
+        border: 1px solid #ddd;
+        padding: 1rem;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
-    .promo-item img {
-        width: 150px; /* Ancho fijo para mantener la consistencia */
-        height: 150px; /* Alto fijo para mantener la consistencia */
-        margin-right: 20px; /* Espacio entre la imagen y el texto */
+    .product-image {
+        width: 100%; /* Aseguramos que las imágenes ocupen todo el ancho disponible */
+        height: auto; /* Mantener la proporción de la imagen */
     }
 
-    .promo-info {
-        text-align: left; /* Alinear el texto a la izquierda */
+    button {
+        width: 100%; /* Los botones ocupan todo el ancho disponible */
+        padding: 1rem 0;
+        font-size: 1.2rem;
     }
-    .whatsapp-icon {
-        position: fixed; /* Fijo en la pantalla */
-        bottom: 20px; /* Distancia desde la parte inferior */
-        right: 20px; /* Posición en la derecha */
-        z-index: 1000; /* Asegura que esté encima de otros elementos */
+}
+
+/* Estilo para pantallas muy pequeñas (dispositivos con menos de 400px de ancho) */
+@media screen and (max-width: 400px) {
+    /* Ajustes en las promociones para mostrar 2 productos en una fila en pantallas más pequeñas */
+    .promo-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas muy pequeñas */
+        gap: 1rem;
     }
-    
-    .whatsapp-icon img {
-        width: 50px; /* Tamaño por defecto del icono */
-        height: 50px; /* Tamaño por defecto del icono */
+
+    /* Ajuste de la imagen del producto */
+    .product-image {
+        width: 100%;
+        height: auto;
     }
-    
-    /* Media Query para pantallas de celulares */
-    @media (max-width: 768px) {
-        .whatsapp-icon img {
-            width: 60px; /* Tamaño del icono en móvil */
-            height: 60px; /* Tamaño del icono en móvil */
-        }
+
+    /* Ajustes de los botones */
+    button {
+        font-size: 1.1rem;
     }
-    
-    /* Media Query para pantallas grandes */
-    @media (min-width: 769px) {
-        .whatsapp-icon img {
-            width: 40px; /* Tamaño del icono en escritorio */
-            height: 40px; /* Tamaño del icono en escritorio */
-        }
-    }
-    h1 {
-        color: white; /* Cambia el color a blanco */
-    }
-    
-    
+}
+
+/* Estilo del botón flotante */
+#floating-btn {
+    position: fixed;
+    bottom: 20px; /* Distancia desde el borde inferior de la pantalla */
+    right: 20px; /* Distancia desde el borde derecho de la pantalla */
+    background-color: var(--primary-color);
+    padding: 15px;
+    border-radius: 50%; /* Hace que el botón sea circular */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 1000; /* Asegura que el botón esté encima de otros elementos */
+}
+
+/* Imagen dentro del botón flotante */
+#floating-btn img {
+    width: 30px; /* Ajusta el tamaño de la imagen dentro del botón */
+    height: 30px;
+    object-fit: contain; /* Asegura que la imagen no se deforme */
 }
