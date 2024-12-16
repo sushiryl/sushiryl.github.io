@@ -116,7 +116,7 @@ header .logo {
     #nav-menu ul {
         display: flex;
         justify-content: flex-start; /* Mantiene los elementos en fila */
-        gap: 20px;
+        gap: 10px;
     }
 
     #nav-menu li {

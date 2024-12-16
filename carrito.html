@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Asegúrate de tener un archivo de estilos -->
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Carrito de Compras</h1>
+            <h1>Carrito </h1>
             <nav>
                 <ul>
                     <li><a href="index.html">Volver a Tienda</a></li>
@@ -17,14 +17,33 @@
             </nav>
         </div>
     </header>
-    <section id="carrito">
-        <h2>Carrito de Compras</h2>
-        <div id="cart-items">
-            <p>Tu carrito está vacío.</p>
+    <div id="cart-items"></div>
+    <div id="cart-total"></div>
+    
+    <form id="checkout-form">
+        <!-- Campos para ingresar nombre -->
+        <label for="name">Nombre:</label>
+        <input type="text" id="name" required>
+
+        <!-- Opciones de entrega -->
+        <p>Selecciona el método de entrega:</p>
+        <label>
+            <input type="radio" name="delivery" value="Retira en local" id="pickup" required> Retira en local
+        </label>
+        <label>
+            <input type="radio" name="delivery" value="Pedido a repartir" id="delivery" required> Pedido a repartir
+        </label>
+
+        <!-- Campo de dirección, inicialmente oculto -->
+        <div id="address-container" style="display:none;">
+            <label for="address">Dirección de entrega:</label>
+            <input type="text" id="address">
         </div>
-        <p id="cart-total">Total: $0</p>
-        <button id="checkout">Finalizar Compra</button>
-    </section>
+
+        <!-- Botón para finalizar la compra -->
+        <button type="button" id="checkout">Finalizar compra</button>
+    </form>
+
     <script src="carrito.js"></script>
 </body>
 </html>
