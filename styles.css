@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    background:#ff348b;
+    background: black;
     color: #fff;
     padding: 5px 0;  /* Mantener la altura del header */
     position: sticky;
@@ -29,7 +29,7 @@ header .container {
 }
 
 header .logo {
-    height: 40px; /* Tamaño ajustado del logo */
+    height: 60px; /* Tamaño ajustado del logo */
     width: auto;
 }
 
