@@ -6,6 +6,27 @@
     <title>Sushi R&L</title>
     <link rel="stylesheet" href="styles.css">
     <style>
+        /* Estilo para el botón flotante del carrito */
+        #floating-btn {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #ff348b;
+            padding: 10px;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease;
+        }
+
+        #floating-btn:hover {
+            background-color: #ff348b;
+        }
+
+        #floating-btn img {
+            width: 40px;
+            height: 40px;
+        }
+
         .cart-count {
             position: absolute;
             top: -5px;
@@ -36,6 +57,7 @@
                     <li><a href="#sushiburger">Sushi Burger</a></li>
                     <li><a href="#pizza">Pizza</a></li>
                     <li><a href="#handrollsmayor">Por Mayor</a></li>
+                    <li><a href="#potes">Potes</a></li>
                  </ul>
             </nav>
         </div>

@@ -29,7 +29,7 @@ header .container {
 }
 
 header .logo {
-    height: 60px; /* Tamaño ajustado del logo */
+    height: 40px; /* Tamaño ajustado del logo */
     width: auto;
 }
 
@@ -108,7 +108,7 @@ header .logo {
     }
 
     #nav-menu li a:hover {
-        background: fuchsia;
+        background: #ff348b;
         color: #333;
     }
 
@@ -207,12 +207,12 @@ button:hover {
     font-size: 14px;
 }
 .add-to-cart {
-    background: fuchsia;
+    background: #ff348b;
     color: #fff;
 }
 
 .add-to-cart:hover {
-    background: #d400d4;
+    background: #ff348b;
 }
 
 button.delete {
@@ -223,13 +223,28 @@ button.delete {
 button.delete:hover {
     background: darkred;
 }
+/* Estilos para el botón de eliminar */
+.delete-btn.remove {
+    background-color: #ff4d4d; /* Color rojo para indicar eliminación */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn.remove:hover {
+    background-color: #ff1a1a; /* Un tono de rojo más oscuro al pasar el ratón */
+}
 
 /* Floating Button (Carrito) */
 #floating-btn {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background: fuchsia;
+    background: #ff348b;
     border-radius: 50%;
     width: 60px;
     height: 60px;
