@@ -190,9 +190,9 @@
 <!-- Botón flotante -->
 <a href="carrito.html" id="floating-btn">
     <img src="img/carro.png" alt="Carrito">
+    <span id="cart-count" class="cart-count">0</span> <!-- Aquí se mostrará la cantidad de productos -->
 </a>
 
-    <script src="script.js"></script>
 </body>
 <script>
     // Escucha el clic del botón para abrir/cerrar el menú
@@ -201,4 +201,43 @@
         navMenu.classList.toggle('hidden'); // Alterna la visibilidad del menú
     });
 </script>
+<script>
+    // Aquí va el código JavaScript
+    document.querySelectorAll('.add-to-cart').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.dataset.name; // Nombre del producto
+            const price = parseInt(button.dataset.price, 10); // Precio del producto
+    
+            if (!name || isNaN(price)) {
+                console.error('Error: el producto no tiene nombre o precio válido.');
+                return;
+            }
+    
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    
+            const existingItem = cart.find(item => item.name === name);
+    
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({ name, price, quantity: 1 });
+            }
+    
+            localStorage.setItem('cart', JSON.stringify(cart));
+    
+            updateCartCount();
+        });
+    });
+    
+    // Función para actualizar el contador del carrito
+    function updateCartCount() {
+        const cart = JSON.parse(localStorage.getItem('cart')) || [];
+        const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+        document.getElementById('cart-count').textContent = totalItems;
+    }
+    
+    // Inicializar el contador al cargar la página
+    updateCartCount();
+    </script>
+    
 </html>
