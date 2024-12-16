@@ -1,3 +1,4 @@
+
 // Obtener el contador del carrito
 const cartCount = document.getElementById('cart-count');
 

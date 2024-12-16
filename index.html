@@ -10,20 +10,22 @@
     <header>
         <div class="container">
             <img src="img/logo.jpg" alt="Logo Sushi R&L" class="logo">
-            <nav>
+            <button class="menu-toggle" id="menu-toggle">
+                ☰
+            </button>
+            <nav id="nav-menu" class="hidden">
                 <ul>
                     <li><a href="#sushi">Sushi</a></li>
                     <li><a href="#handrolls">Hand rolls</a></li>
                     <li><a href="#sushiburger">Sushi Burger</a></li>
                     <li><a href="#pizza">Pizza</a></li>
-                    <li><a href="#handrollsmayor">por Mayor</a></li>
+                    <li><a href="#handrollsmayor">Por Mayor</a></li>
                     <li><a href="#potes">Potes</a></li>
                     <li><a href="carrito.html">Carrito (<span id="cart-count">0</span>)</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <!-- Sushi Section -->
     <section id="sushi">
         <h2>Sushi</h2>
@@ -45,38 +47,35 @@
             <div class="promo-item">
                 <img src="img/promo2.jpg" alt="Promo 2" class="product-image">
                 <h3>Promo 2</h3>
-                <p>20 kanikama-Palta-Queso, 10 Pollo-Palta-Queso.</p>
+                <p>20 kanikama 10 Pollo</p>
                 <p><strong>$9.500</strong></p>
                 <button class="add-to-cart" data-name="Promo 2" data-price="9500">Agregar al carrito</button>
             </div>
             <div class="promo-item">
                 <img src="img/promo3.jpg" alt="Promo 3" class="product-image">
                 <h3>Promo 3</h3>
-                <p>30 cortes mixtos: Pollo-Palta-Queso, kanikama-Palta-Queso, Camarón-Palta-Queso.</p>
+                <p>30 cortes mixtos Pollo-kanikama-Camarón</p>
                 <p><strong>$11.000</strong></p>
                 <button class="add-to-cart" data-name="Promo 3" data-price="11000">Agregar al carrito</button>
             </div>
             <div class="promo-item">
                 <img src="img/50.jpeg" alt="Promo 50" class="product-image">
                 <h3>Promo 50 Cortes mixtos</h3>
-                <p>20 cortes fritos, 10 cortes en Nori, 10 cortes en Palta, 10 cortes en Queso.<br>
+                
                 <p><strong>$18.500</strong></p>
                 <button class="add-to-cart" data-name="Promo 50 Cortes mixtos" data-price="18500">Agregar al carrito</button>
             </div>
             <div class="promo-item">
                 <img src="img/70.jpeg" alt="Promo 70" class="product-image">
                 <h3>Promo 70 Cortes mixtos</h3>
-                <p>20 cortes fritos, 20 cortes en Nori, 20 cortes en Palta, 10 cortes en Queso.<br>
-                </p>
+                 </p>
                 <p><strong>$24.000</strong></p>
                 <button class="add-to-cart" data-name="Promo 70 Cortes mixtos" data-price="24000">Agregar al carrito</button>
             </div>
             <div class="promo-item">
                 <img src="img/100.jpeg" alt="Promo 100" class="product-image">
                 <h3>Promo 100 Cortes mixtos</h3>
-                <p>50 cortes fritos, 20 cortes en Nori, 10 cortes en Palta, 20 cortes en Queso.<br>
-                    Pollo-Palta-Queso, Pollo crispy-Palta-Queso, kanikama-Palta-Queso, kanikama crispy-Palta-Queso, Camarón-Palta-Queso.</p>
-                <p><strong>$32.500</strong></p>
+                 <p><strong>$32.500</strong></p>
                 <button class="add-to-cart" data-name="Promo 100 Cortes mixtos" data-price="32500">Agregar al carrito</button>
             </div>
         </div>
@@ -174,7 +173,7 @@
             <div class="promo-item">
                 <img src="img/pormayor.jpg " alt="Promo 1" class="product-image">
                 <h3>Hand rolls por mayor</h3>
-                <p>(desde 10 unidades) Pollo-Palta-Queso o kanikama-Palta-Queso.</p>
+                <p>(desde 10 unidades) Pollo o kanikama</p>
                 <p><strong>$1.500</strong></p>
                 <button class="add-to-cart" data-name="Hand rolls por mayor" data-price="1500">Agregar al carrito</button>
             </div>
@@ -208,4 +207,11 @@
 
     <script src="script.js"></script>
 </body>
+<script>
+    // Escucha el clic del botón para abrir/cerrar el menú
+    document.getElementById('menu-toggle').addEventListener('click', function() {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('hidden'); // Alterna la visibilidad del menú
+    });
+</script>
 </html>
