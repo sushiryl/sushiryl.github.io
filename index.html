@@ -48,6 +48,47 @@
             font-size: 12px;
             font-weight: bold;
         }
+        .promo-ite {
+    display: flex;
+    flex-direction: column; /* Asegura que los elementos se coloquen en columnas */
+    align-items: center; /* Centra horizontalmente el contenido */
+    text-align: center; /* Centra el texto */
+    padding: 10px;
+    width: auto; /* Ajusta el ancho automáticamente */
+    max-width: 100%; /* Limita el ancho al contenedor */
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total */
+    word-wrap: break-word; /* Permite que el texto se divida en palabras largas */
+}
+
+.promo-ite .product-image {
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene las proporciones de la imagen */
+    margin-bottom: 10px; /* Espaciado entre la imagen y el contenido */
+}
+
+.promo-ite p {
+    margin: 10px 0; /* Espaciado uniforme para los párrafos */
+    line-height: 1.5; /* Mejora la legibilidad del texto */
+}
+
+.promo-ite .old-price {
+    font-size: 14px; /* Ajusta el tamaño del texto dentro del contenido antiguo */
+    color: gray; /* Cambia el color para diferenciarlo */
+}
+
+.promo-ite .add-to-cart {
+    background-color: #ff348b; /* Color del botón */
+    color: white; /* Texto del botón */
+    padding: 10px 15px; /* Tamaño del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.promo-ite .add-to-cart:hover {
+    background-color: #e02a76; /* Color al pasar sobre el botón */
+}
+
     </style>
 </head>
 <body>
