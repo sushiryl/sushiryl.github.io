@@ -16,10 +16,6 @@ Crear una página web interactiva que permita a los usuarios explorar un menú d
 - Arquitectura Frontend: Construido con tecnologías web estándar.
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> c434a70 (Agregado: [descripción de los archivos])
 ## 🛠️ Tecnologías Utilizadas
 
 - HTML5: Estructura semántica del sitio web.
@@ -42,13 +38,8 @@ sushiryl.github.io/
 Clona este repositorio en tu máquina local:
 bash
 Copiar código
-<<<<<<< HEAD
-git clone https://github.com/sushiryl/sushiryl.github.io.git
-Abre el archivo index.html en tu navegador favorito.
-=======
 git clone https://github.com/pedroandr3s/sushiryl.git
 Abre el archivo index.html en tu navegador favorito o en revisa la pagina levantada en https://sushiryl.github.io/.
->>>>>>> c434a70 (Agregado: [descripción de los archivos])
 Explora el menú, agrega productos al carrito y realiza un pedido.
 🤝 Contribuciones
 ¡Las contribuciones son bienvenidas! Si tienes ideas para mejorar este proyecto, no dudes en abrir un issue o enviar un pull request.
