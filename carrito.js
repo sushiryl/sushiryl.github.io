@@ -1,4 +1,4 @@
-// Elementos DOM
+// carrito.js
 const cartItemsDiv = document.getElementById('cart-items');
 const cartTotalP = document.getElementById('cart-total');
 let cart = JSON.parse(localStorage.getItem('cart')) || [];

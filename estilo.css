@@ -1,0 +1,348 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+header .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: #ff348b;
+    font-size: 1.8rem;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    background-color: #ff348b;
+    color: white;
+}
+
+/* Cart items styles */
+#cart-items {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.cart-item:last-child {
+    border-bottom: none;
+}
+
+.item-info {
+    flex: 1;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn {
+    background-color: #f8f9fa;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #333;
+}
+.quantity-btn:hover {
+    background-color: #ff348b;
+    color: white;
+}
+
+/* Cart total styles */
+#cart-total {
+    max-width: 1000px;
+    margin: 0 auto 2rem;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #ff348b;
+}
+
+/* Form styles */
+#checkout-form {
+    max-width: 1000px;
+    margin: 0 auto 3rem;
+    padding: 30px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.05);
+}
+
+#checkout-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: 500;
+}
+
+#checkout-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #eee;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#checkout-form input[type="text"]:focus {
+    border-color: #ff348b;
+    outline: none;
+}
+
+/* Radio button groups */
+#checkout-form p {
+    margin: 1.5rem 0 0.5rem;
+    font-weight: 500;
+    color: #333;
+}
+
+#checkout-form label:has(input[type="radio"]) {
+    display: inline-flex;
+    align-items: center;
+    margin: 0.5rem 2rem 0.5rem 0;
+    cursor: pointer;
+}
+
+#checkout-form input[type="radio"] {
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+/* Custom radio buttons */
+#checkout-form input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    position: relative;
+    top: -1px;
+}
+
+#checkout-form input[type="radio"]:checked {
+    border-color: #ff348b;
+}
+
+#checkout-form input[type="radio"]:checked::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #ff348b;
+    border-radius: 50%;
+}
+
+/* Checkout button */
+#checkout {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-top: 2rem;
+    background-color: #ff348b;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#checkout:hover {
+    background-color: #e02a76;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 52, 139, 0.3);
+}
+
+#checkout:active {
+    transform: translateY(0);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    #checkout-form {
+        margin: 1rem;
+        padding: 20px;
+    }
+
+    #checkout-form label:has(input[type="radio"]) {
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .quantity-controls {
+        justify-content: center;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.cart-item {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Error states */
+.error {
+    border-color: #ff4757 !important;
+}
+
+.error-message {
+    color: #ff4757;
+    font-size: 0.9rem;
+    margin-top: 0.3rem;
+}
+/* Mantener todo el CSS anterior y actualizar/agregar estas secciones */
+
+/* Header responsive mejorado */
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: row; /* Cambiado de column a row */
+        justify-content: space-between;
+        text-align: left;
+        gap: 1rem;
+    }
+}
+
+/* Estilos mejorados para los controles de cantidad y eliminar */
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-btn:hover {
+    background-color: #ff348b;
+    color: white;
+}
+
+.delete-btn {
+    background-color: #fff;
+    border: 2px solid #ff4757;
+    color: #ff4757;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.delete-btn:hover {
+    background-color: #ff4757;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(255, 71, 87, 0.2);
+}
+
+.delete-btn:active {
+    transform: translateY(0);
+}
+
+/* Estilos responsive actualizados */
+@media (max-width: 768px) {
+    .cart-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+        padding: 1.5rem;
+    }
+
+    .cart-item-controls {
+        width: 100%;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .delete-btn {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
